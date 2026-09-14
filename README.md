@@ -40,13 +40,20 @@ anything. That is deliberate: it is the loop for testing against a real pump.
 ## Running
 
 ```sh
-docker run -dit --restart unless-stopped \
+docker run -dit --name nibepi --restart unless-stopped \
   -v /opt/nibepi/data/nibepi-flow:/data \
   -v /opt/nibepi/etc/nibepi:/etc/nibepi \
   -v /opt/nibepi/tmp:/tmp \
   -p 1880:1880 \
   -p 9999:9999/udp \
   nibepi-nodered
+```
+
+A fixed name means the same command will not simply run again after a
+rebuild. Replace the container with:
+
+```sh
+docker stop nibepi && docker rm nibepi
 ```
 
 | mount | holds |
