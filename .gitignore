@@ -1,0 +1,4 @@
+# The two code repositories are checked out here as siblings and built into the
+# image. Each keeps its own history; neither belongs to this repo.
+/nibepi/
+/node-red-contrib-nibepi/
