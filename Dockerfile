@@ -1,8 +1,8 @@
-# Node-RED 5.0.7 on Node 24 — the combination the dependency audit was run against.
+# Node-RED 5.0.9 on Node 24 — the combination the dependency audit was run against.
 # serialport 13 ships prebuilt binaries for Node >=20, so no build toolchain is
 # needed at image build time (serialport 9 had prebuilds only up to Node 16,
 # which is what pinned this image to the -14 tag).
-FROM nodered/node-red:5.0.7-24
+FROM nodered/node-red:5.0.9-24
 
 # Tells the nibepi core it is running in a container: config writes go
 # straight to disk instead of bracketing themselves with sudo mount
