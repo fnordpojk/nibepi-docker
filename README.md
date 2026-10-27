@@ -73,10 +73,3 @@ gateway has to accept them. With
 [elupus/esphome-nibe](https://github.com/elupus/esphome-nibe) that means the
 Docker host's address must appear in the `source:` list, and `read_port` /
 `write_port` must be `10000` / `10001` to match.
-
-## NIBEPI_DOCKER
-
-The image sets `NIBEPI_DOCKER=1`. Without it the core assumes a bare Raspberry Pi
-with a read-only SD card and brackets every config write in
-`sudo mount -o remount,rw /`, which fails inside a container and loses the write
-silently. Bare-Pi installs leave the variable unset.

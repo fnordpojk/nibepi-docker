@@ -4,11 +4,6 @@
 # which is what pinned this image to the -14 tag).
 FROM nodered/node-red:5.0.9-24
 
-# Tells the nibepi core it is running in a container: config writes go
-# straight to disk instead of bracketing themselves with sudo mount
-# remount,rw to reach a read-only SD card. Bare-Pi installs leave this unset.
-ENV NIBEPI_DOCKER=1
-
 COPY nibepi /usr/src/nibepi
 COPY node-red-contrib-nibepi /usr/src/node-red-contrib-nibepi
 
